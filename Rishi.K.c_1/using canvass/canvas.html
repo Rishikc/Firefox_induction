@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body onclick="draw()">
+<canvas id="myCanvas" width="305" height="210" style="border:1px solid #d3d3d3;">
+</canvas>
+<script >
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var x=20;
+var y=200;
+ctx.beginPath();
+
+ctx.moveTo(20,200);
+ctx.lineTo(20,180);
+ctx.lineTo(60,180);
+ctx.lineTo(60,140);
+ctx.lineTo(100,140);
+ctx.lineTo(100,100);
+ctx.lineTo(140,100);
+ctx.lineTo(140,60);
+ctx.lineTo(180,60);
+ctx.lineTo(180,100);
+ctx.lineTo(220,100);
+ctx.lineTo(220,140);
+ctx.lineTo(260,140);
+ctx.lineTo(260,180);
+ctx.lineTo(300,180);
+ctx.lineTo(300,200);
+ctx.lineTo(20,200);
+ctx.strokeStyle="red";
+ctx.stroke();
+var speed=30;
+function decrease_speed()//decreases speed
+{if(speed>=100)
+  alert("minimum speed reached");
+  else
+  speed+=10; }
+  
+  function increase_speed()//increases speed
+{if(speed<=20)
+  alert("maximum speed reached");
+  else
+   speed-=10; }
+
+function draw(){
+    
+	c.width = c.width;//to clearscreen
+    ctx.arc(x,y,5,0,Math.PI*2,true);//to redraw arc
+	ctx.fill();
+
+	if(x==20)
+	y-=5;
+	
+	if(x==60)
+	y-=5;
+	
+	if(x==100)
+	y-=5;
+	
+	if(x==140)
+	y-=5;
+	
+	if(y==180)
+	x+=5;
+	
+    if(y==140)
+	x+=5;
+	
+	if(y==100)
+	x+=5;
+	
+	if(y==60)
+	x+=5;
+	
+    if(x==180)
+	y+=5;
+	
+	if(x==220)
+	y+=5;
+	
+	if(x==260)
+	y+=5;
+	
+	if(x==300)
+	y+=5;
+	
+	if(y==200)
+	x-=7;
+	
+	if(y==100)
+	x+=0;
+	
+	if(y==140)
+	x+=0;
+	
+	if(y==160)
+	x+=0;
+	
+	
+	var z=speed;//variable speed controls speed by changing the number of milliseconds in setTimeout() function
+	var e=setTimeout('draw('+x+','+y+')',z);
+
+}
+</script>
+<p>SPEED CONTROLS</p>
+<button onclick="increase_speed();" > Increase</button>
+<button onclick="decrease_speed();"> Decrease</button>
+</body>
+</html>

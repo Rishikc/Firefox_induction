@@ -1,0 +1,14 @@
+{
+"version":"1.0",
+"name": "with using canvas",
+"description": "This app moves a object in a particular path with using canvas",
+"launch_path": "/canvas.html",
+"icons": {
+"128": "/images/o.jpg"
+},
+"developer": {
+"name": "Rishi k.c"
+},
+"default_locale": "en",
+"type": "privileged"
+}

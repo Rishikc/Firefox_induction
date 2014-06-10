@@ -1,0 +1,14 @@
+{
+"version":"1.0",
+"name": "without using canvass",
+"description": "This app moves a object in a particular path without using canvass",
+"launch_path": "/path.html",
+"icons": {
+"128": "/images/onm1.jpg"
+},
+"developer": {
+"name": "Rishi k.c"
+},
+"default_locale": "en",
+"type": "privileged"
+}
